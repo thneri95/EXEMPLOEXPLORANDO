@@ -2,6 +2,16 @@ namespace ExemploExplorando.Models
 {
     public class Person
     {
+        public Person()
+        { }
+
+        public Person(string name, string lastname)
+        {
+            Name = name;
+            LastName = lastname;
+
+        }
+
         private string _name;
         private int _age;
 

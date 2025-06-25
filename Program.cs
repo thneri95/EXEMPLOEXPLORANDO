@@ -1,15 +1,9 @@
-﻿
-
-using ExemploExplorando.Models;
+﻿using ExemploExplorando.Models;
 
 
-Person p1 = new Person();
-p1.Name = "Tiago";
-p1.LastName = "Borges";
+Person p1 = new Person("Tiago", "Borges");
+Person p2 = new Person("Pedro", "Neri");
 
-Person p2 = new Person();
-p2.Name = "Pedro";
-p2.LastName = "Neri";
 
 
 Course englishCourse = new Course();
@@ -19,12 +13,6 @@ englishCourse.Students = new List<Person>();
 englishCourse.Students.Add(p1);
 englishCourse.Students.Add(p2);
 englishCourse.ListStudents();
-
-
-
-
-
-
 
 
 
