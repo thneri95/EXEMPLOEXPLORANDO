@@ -35,18 +35,17 @@ namespace ExemploExplorando.Models
         public void ListStudents()
         {
 
-            if (Students.Any())
+            Console.WriteLine($"Students in '{Name}' course:");
+
+            for (int count = 0; count < Students.Count; count++)
             {
-                Console.WriteLine($"Students in course '{Name}':");
-                foreach (Person student in Students)
-                {
-                    Console.WriteLine($"- {student.FullName}"); // Assuming Person has a FullName property
-                }
+                string text = "Nº " + count + " - " + Students[count].FullName;
+                Console.WriteLine(text); // Assuming Person has a FullName property
+
             }
-            else
-            {
-                Console.WriteLine($"There are no students in course '{Name}'.");
-            }
+
+
+
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using ExemploExplorando.Models;
 
 
-Person p1 = new Person("Tiago", "Borges");
-Person p2 = new Person("Pedro", "Neri");
+Person p1 = new Person(name: "Tiago", lastname: "Borges");
+Person p2 = new Person(name: "Pedro", lastname: "Neri");
 
 
 
