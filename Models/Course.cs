@@ -10,7 +10,7 @@ namespace ExemploExplorando.Models
 
         public List<Person> Students { get; set; }
 
-        // Constructor to initialize the Students list. This is crucial to avoid NullReferenceException.
+        // Constructor to initialize the Students list
         public Course()
         {
             Students = new List<Person>();
@@ -39,8 +39,14 @@ namespace ExemploExplorando.Models
 
             for (int count = 0; count < Students.Count; count++)
             {
-                string text = "Nº " + count + " - " + Students[count].FullName;
-                Console.WriteLine(text); // Assuming Person has a FullName property
+
+                // string text = "Nº " + count + " - " + Students[count].FullName;
+
+                // other whay below
+                string text = $"Nº  {count + 1}  - {Students[count].FullName}";
+
+
+                Console.WriteLine(text);
 
             }
 

@@ -1,18 +1,14 @@
-﻿using ExemploExplorando.Models;
+﻿using System.Globalization;
+using ExemploExplorando.Models;
 
 
-Person p1 = new Person(name: "Tiago", lastname: "Borges");
-Person p2 = new Person(name: "Pedro", lastname: "Neri");
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
 
+decimal MonetaryValue = 1582.40M;
 
+Console.WriteLine($"{MonetaryValue:C}");
 
-Course englishCourse = new Course();
-englishCourse.Name = "English";
-englishCourse.Students = new List<Person>();
-
-englishCourse.Students.Add(p1);
-englishCourse.Students.Add(p2);
-englishCourse.ListStudents();
+// optional, change location of culture:  Console.WriteLine(MonetaryValue.ToString("C", CultureInfo.CreateSpecificCulture("pt-BR")));
 
 
 
@@ -24,25 +20,34 @@ englishCourse.ListStudents();
 
 
 
+// ---------------------------
+
+// int number1 = 10;
+// int number2 = 20;
 
 
 
+// int result = number1 + number2;
+
+// Console.WriteLine(result);
+
+//-----------------------------------------
+
+// Person p1 = new Person(name: "Tiago", lastname: "Borges");
+// Person p2 = new Person(name: "Pedro", lastname: "Neri");
 
 
 
+// Course englishCourse = new Course();
+// englishCourse.Name = "English";
+// englishCourse.Students = new List<Person>();
+
+// englishCourse.Students.Add(p1);
+// englishCourse.Students.Add(p2);
+// englishCourse.ListStudents();
 
 
-
-
-
-
-
-
-
-
-
-
-
+//-----------------------------------
 
 
 // Create a new Person object
