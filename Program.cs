@@ -1,22 +1,109 @@
 ﻿using System.Globalization;
 using ExemploExplorando.Models;
 
-Queue<int> line = new Queue<int>();
 
-line.Enqueue(2);
-line.Enqueue(4);
-line.Enqueue(6);
-line.Enqueue(8);
+Dictionary<string, string> uf = new Dictionary<string, string>();
+// to add
 
-foreach (int item in line)
+uf.Add("SP", "São Paulo");
+uf.Add("RJ", "Rio de Janeiro");
+uf.Add("MG", "Minas Gerais");
+
+// To enter the Uf 
+//Console.WriteLine(uf["MG"]);
+
+
+
+
+foreach (var item in uf)
+
 {
+    Console.WriteLine($"Key: {item.Key}, Value: {item.Value}");
+}
 
-    Console.WriteLine(item);
+
+Console.WriteLine("----------------");
+
+uf.Remove("MG");
+uf["SP"] = "São Paulo - Changed Value";
+
+foreach (var item in uf)
+{
+    Console.WriteLine($"Key: {item.Key}, Value: {item.Value}");
 
 }
 
-line.Dequeue();
+string key = "SC";
+Console.WriteLine($"Verifying  element: {key}");
 
+if (uf.ContainsKey(key))
+{
+    Console.WriteLine($"There is the value: {key}");
+}
+else
+{
+    Console.WriteLine($"There isn't the value, it is ok to add the key: {key}");
+}
+
+
+
+
+
+// //Inverse the Queue: Pile
+
+// Stack<int> pile = new Stack<int>();
+
+// pile.Push(4);
+// pile.Push(6);
+// pile.Push(8);
+// pile.Push(10);
+
+
+// foreach (int item in pile)
+
+// {
+//     Console.WriteLine(item);
+// }
+
+// //remove the last element and return it:
+// Console.WriteLine($"Remove the element at top: {pile.Pop()} ");
+
+// pile.Push(20);
+// foreach (int item in pile)
+
+// {
+
+//     Console.WriteLine(item);
+// }
+
+
+
+//--------------------------------------------
+
+// Queue 
+
+// Queue<int> line = new Queue<int>();
+
+// line.Enqueue(2);
+// line.Enqueue(4);
+// line.Enqueue(6);
+// line.Enqueue(8);
+
+// foreach (int item in line)
+// {
+
+//     Console.WriteLine(item);
+
+// }
+
+// Console.WriteLine($"Remove the element: {line.Dequeue()}");
+
+
+// foreach (int item in line)
+// {
+
+//     Console.WriteLine(item);
+// }
 
 
 //-----------------------
