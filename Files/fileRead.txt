@@ -1,0 +1,2 @@
+Line 1 of fileRead
+Line 2 of fileRead - Start content

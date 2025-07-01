@@ -1,12 +1,55 @@
 ﻿using System.Globalization;
 using ExemploExplorando.Models;
 
+Queue<int> line = new Queue<int>();
 
-// To set Data and Time: 
+line.Enqueue(2);
+line.Enqueue(4);
+line.Enqueue(6);
+line.Enqueue(8);
 
-DateTime data = DateTime.Now;
+foreach (int item in line)
+{
 
-Console.WriteLine(data.ToString("MM/dd/yyyy  HH:mm"));
+    Console.WriteLine(item);
+
+}
+
+line.Dequeue();
+
+
+
+//-----------------------
+
+
+// new ExemploException().Method1();
+
+// ------------------
+
+
+// string[] lines = File.ReadAllLines("Files/fileRead.txt");
+
+// foreach (string line in lines)
+
+// {
+
+//     Console.WriteLine(line);
+
+// }
+
+
+
+
+
+
+//----------------------------------------- 
+
+
+// // To set Data and Time: 
+
+// DateTime data = DateTime.Now;
+
+// Console.WriteLine(data.ToString("MM/dd/yyyy  HH:mm"));
 
 
 
